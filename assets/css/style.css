@@ -9,3 +9,33 @@ body {
     background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
 }
 
+.container {
+    background-color: #ff7e67;
+    width: 90%;
+    max-width: 700px;
+    margin: 6rem auto 0;
+    border-radius: 5px;
+}
+
+.container h1 {
+    font-size: 30px;
+    font-weight: 500;
+    border-bottom: 2px solid #347474;
+    padding: 1rem;
+    text-align: center;
+    color: #35495e;
+}
+
+.choices {
+    background-color: #35495e;
+    font-weight: 600;
+    width: 100%;
+    border: 1px solid #347474;
+    padding: 1rem;
+    margin: 0.8rem 0;
+    text-align: left;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s;
+    color: white; 
+}
