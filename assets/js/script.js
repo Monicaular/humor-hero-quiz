@@ -99,3 +99,38 @@ function beginQuiz() {
     nextButton.innerHTML = 'Next Question';
     displayQuestion();
 }
+
+// Function for showing the questions
+
+function displayQuestion() {
+    resetQuestions();
+    let currentQuestion = questions[questionCounter];
+    let questionNo = questionCounter + 1;
+    questionText.innerHTML = questionNo + ") " + currentQuestion.question;
+
+    // Display the answer
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement('button');
+        button.innerHTML = answer.text;
+        button.classList.add('choices');
+        answerChoices.appendChild(button);
+
+        button.addEventListener('click', selectChoice); // add click function to the choices
+
+
+    });
+
+}
+// Function for hiding the question and choices from html and replacing them 
+function resetQuestions() {
+    nextButton.style.display = 'none';
+    while(answerChoices.firstChild) {
+        answerChoices.removeChild(answerChoices.firstChild);
+    }
+
+}
+
+beginQuiz();
+
+
