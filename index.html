@@ -13,12 +13,27 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300&display=swap" rel="stylesheet">
 
+<!--Fontawesome-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <title>Humor Hero Quiz</title>
 </head>
 <body>
 <div class="container">
-    <h1>Humor Hero</h1>
+    <h1> <i class="fa-solid fa-face-laugh"></i> Humor Hero <i class="fa-solid fa-face-grin-wink"></i> </h1>
     <div class="quiz">
+        <div id="head-display">
+            <div id="head-item">
+                <p class="head-prefix"> Question</p>
+                <h1 class="head-main-text" id="question-number">1/3</h1>
+            </div>
+            <div id="head-item">
+                <p class="head-prefix"> Score </p>
+                <h1 class="head-main-text" id="score"> 0 </h1>
+            </div>
+        </div>
         <h2 id="question">Please answer to the following question</h2>
         <div id="answer-choices">
             <button class="choices">Choice 1</button>
