@@ -53,9 +53,13 @@ body {
     color: white; 
 }
 
-.choices:hover {
+.choices:hover:not([disabled]) {
     background: #e0ffcd;
     color: #35495e;
+}
+
+.choices:disabled{
+    cursor: no-drop;
 }
 
 #next {
@@ -67,6 +71,11 @@ body {
     border-radius: 3px;
     cursor: pointer;
     display: none;
+}
+
+#next:hover {
+    background: #e0ffcd;
+    color: #35495e;
 }
 
 /* Styles for correct and incorrect choices created din JS */
