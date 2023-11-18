@@ -30,15 +30,12 @@ body {
     display: flex;
     justify-content: space-between;
     margin: 20px;
-    background-color:
-
 }
 
 .head-prefix {
     text-align: center;
     font-weight: bold;
     font-size: 1.3rem;
-
 }
 
 .head-main-text {
@@ -78,7 +75,7 @@ body {
     color: #35495e;
 }
 
-.choices:disabled{
+.choices:disabled {
     cursor: no-drop;
 }
 

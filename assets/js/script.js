@@ -85,12 +85,13 @@ const questions = [
 ];
 
 // Start quiz function
-
 const questionText = document.getElementById('question');
 const answerChoices = document.getElementById('answer-choices');
 const nextButton = document.getElementById('next');
 
-let questionCounter = 0;
+const questionNumberDisplay = document.getElementById('question-number');
+const scoreDisplay = document.getElementById('score');
+let questionCounterDisplay = 0;
 let score = 0;
 
 function beginQuiz() {
@@ -98,6 +99,7 @@ function beginQuiz() {
     score = 0;
     nextButton.innerHTML = 'Next Question';
     displayQuestion();
+    updateScoreDisplay();
 }
 
 // Function for showing the questions
@@ -106,7 +108,10 @@ function displayQuestion() {
     resetQuestions();
     let currentQuestion = questions[questionCounter];
     let questionNo = questionCounter + 1;
-    questionText.innerHTML = questionNo + ") " + currentQuestion.question;
+    let totalQuestions = questions.length;
+
+    questionNumberDisplay.innerText = `${questionNo}/${totalQuestions}`;
+    questionText.innerText = currentQuestion.question;
 
     // Display the answer
 
@@ -121,6 +126,15 @@ function displayQuestion() {
         button.addEventListener('click', selectChoice); // add click function to the choices
     });
 };
+
+//Function for displaying the score when questions are over;
+function displayScore() {
+    resetQuestions();
+    displayScoreMessage(score);
+    nextButton.innerHTML = "Let's Play Again";
+    nextButton.style.display = 'block';
+}
+
 // Function for hiding the question and choices from html and replacing them 
 function resetQuestions() {
     nextButton.style.display = 'none';
@@ -135,7 +149,8 @@ function selectChoice (e) {
     const itsTrue = selectedAnswer.dataset.correct === 'true';
     if (itsTrue) {
         selectedAnswer.classList.add('correct');
-        score++;
+        score += 10;
+        updateScoreDisplay();
     }else{
         selectedAnswer.classList.add('incorrect');
     }
@@ -148,28 +163,27 @@ function selectChoice (e) {
     nextButton.style.display = 'block';
 }
 
-//Function for displaying score messages 
+// Function for displaying the score and the question number on the head
+function updateScoreDisplay() {
+    scoreDisplay.innerText = `${score}%`;
+}
 
+//Function for displaying score messages 
 function displayScoreMessage(score) {
     let scoreMessage = "";
 
-    if (score === questions.length) {
-        scoreMessage = "Wow, you nailed it! Perfect score";
-    }else if (score >= questions.length / 2) {
-        scoreMessage = `Great job! You got ${score} out of ${questions.length} questions right!`
-    }else{
-        scoreMessage = `Nice Try! You answered ${score} out of ${questions.length} questions correctly`;
+    if (score === 100) {
+        scoreMessage = `Wow, you nailed it! You are ${score}% Humor Hero!`;
+    } else if (score >= 80) {
+        scoreMessage = `Great job! You are ${score}% Humor Hero!`;
+    } else {
+        scoreMessage = `Nice try! You are ${score}% Humor Hero`;
     }
+
     questionText.innerHTML = scoreMessage;
-}
-
-//Function for displaying the score when questions are over
-
-function displayScore() {
-    resetQuestions();
-    displayScoreMessage(score);
-    nextButton.innerHTML = "Let's Play Again";
-    nextButton.style.display = 'block';
+    if (questionCounter >= questions.length) {
+        document.getElementById('head-display').style.display = 'none';
+    }
 }
 
 // Function for showing the next question after selecting a choice
@@ -182,6 +196,7 @@ function handleNextQuestion() {
         displayScore();
     }
 }
+
 //Function for the next button
 nextButton.addEventListener('click', () => {
     if (questionCounter < questions.length) {
