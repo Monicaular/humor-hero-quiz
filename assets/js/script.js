@@ -124,10 +124,30 @@ function displayQuestion() {
 // Function for hiding the question and choices from html and replacing them 
 function resetQuestions() {
     nextButton.style.display = 'none';
-    while(answerChoices.firstChild) {
+    while (answerChoices.firstChild) {
         answerChoices.removeChild(answerChoices.firstChild);
     }
 }
+
+// Function for displaying selected choices
+function selectChoice (e) {
+    const selectedAnswer = e.target;
+    const itsTrue = selectedAnswer.dataset.correct === 'true';
+    if (itsTrue) {
+        selectedAnswer.classList.add('correct');
+        score++;
+    }else{
+        selectedAnswer.classList.add('incorrect');
+    }
+    Array.from(answerChoices.children).forEach(button => {
+        if(button.dataset.correct === 'true') {
+            button.classList.add('correct');
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display = 'block';
+}
+
 
 beginQuiz();
 
