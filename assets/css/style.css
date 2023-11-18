@@ -29,7 +29,8 @@ body {
 #head-display {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    /* margin: 20px; */
+    margin: 0 20px;
 }
 
 .head-prefix {
@@ -44,7 +45,7 @@ body {
 }
 
 .quiz {
-    padding: 1.8rem 0;
+    padding: 1rem 0;
 }
 
 .quiz h2 {
