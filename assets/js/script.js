@@ -148,6 +148,48 @@ function selectChoice (e) {
     nextButton.style.display = 'block';
 }
 
+//Function for displaying score messages 
+
+function displayScoreMessage(score) {
+    let scoreMessage = "";
+
+    if (score === questions.length) {
+        scoreMessage = "Wow, you nailed it! Perfect score";
+    }else if (score >= questions.length / 2) {
+        scoreMessage = `Great job! You got ${score} out of ${questions.length} questions right!`
+    }else{
+        scoreMessage = `Nice Try! You answered ${score} out of ${questions.length} questions correctly`;
+    }
+    questionText.innerHTML = scoreMessage;
+}
+
+//Function for displaying the score when questions are over
+
+function displayScore() {
+    resetQuestions();
+    displayScoreMessage(score);
+    nextButton.innerHTML = "Let's Play Again";
+    nextButton.style.display = 'block';
+}
+
+// Function for showing the next question after selecting a choice
+
+function handleNextQuestion() {
+    questionCounter++;
+    if (questionCounter < questions.length) {
+        displayQuestion();
+    }else{
+        displayScore();
+    }
+}
+//Function for the next button
+nextButton.addEventListener('click', () => {
+    if (questionCounter < questions.length) {
+        handleNextQuestion();
+    }else{
+        beginQuiz();
+    }
+});
 
 beginQuiz();
 
