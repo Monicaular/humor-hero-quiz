@@ -26,6 +26,26 @@ body {
     color: #35495e;
 }
 
+#head-display {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    background-color:
+
+}
+
+.head-prefix {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+
+}
+
+.head-main-text {
+    background-color: rgb(182, 244, 146);
+    border-radius: 50%;
+}
+
 .quiz {
     padding: 1.8rem 0;
 }
@@ -54,7 +74,7 @@ body {
 }
 
 .choices:hover:not([disabled]) {
-    background: #e0ffcd;
+    background: white;
     color: #35495e;
 }
 
@@ -74,17 +94,19 @@ body {
 }
 
 #next:hover {
-    background: #e0ffcd;
+    background: white;
     color: #35495e;
 }
 
 /* Styles for correct and incorrect choices created din JS */
 .correct {
-    background: linear-gradient(to right, rgb(182, 244, 146), rgb(51, 139, 147));
+    background: rgb(182, 244, 146);
+    color: #35495e;
 }
 
 .incorrect {
-    background: radial-gradient(circle at 7.5% 24%, rgb(237, 161, 193) 0%, rgb(250, 178, 172) 25.5%, rgb(190, 228, 210) 62.3%, rgb(215, 248, 247) 93.8%);
+    background: #ffb5b5;
+    color: #35495e;
 }
 
 
