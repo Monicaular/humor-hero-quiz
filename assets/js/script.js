@@ -209,8 +209,10 @@ function displayScoreMessage(score) {
 function handleNextQuestion() {
     questionCounter++;
     if (questionCounter < questions.length) {
+        document.getElementById('head-display').style.display = 'flex';
         displayQuestion();
     }else{
+        document.getElementById('head-display').style.display = 'none';
         displayScore();
     }
 }
