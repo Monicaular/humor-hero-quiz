@@ -35,8 +35,24 @@ It is incredibly user-friendly. The first page provides a clear description and 
 + First Page
   
   + The user can read the description of the quiz on the first page to acknowlede its purpose.
+  ![Screenshot with the About Section](assets/images/screenshot-about-section.png)
   + The user can read the instructions on how to play it on the first page in order to be able to understand how to navigate it. 
+  ![Screenshot with the Instructions](assets/images/screenshot-how-to-play.png)
   + The user can begin the quiz only by pressing a simple button called 'Start'.
+  ![Screenshot with the Start button](assets/images/screenshot-start-button.png)
+  
++ Questions section
+
+  + The user can see the question number and also how many questions are left until the quiz finishes.
+  + The user can see their score increasing while answering the questions.
+  ![Screenshot with the head-display with the question number on the left and the score on the right](assets/images/screenshot-head-display.png)
+  + The user can see the correct answer straight away after selecting their choice.
+  ![Screenshot with the right and wrong answers highlighted after selecting a choice](assets/images/screenshot-showing-answers.png)
+  ![Screenshot showing only the right answer when user has selected the correct choice](assets/images/screenshot-correct-choice.png)
+  + User cannot change their response after selecting one. 
+  + User can only jump to the next question after they have selected a choice.
+  ![Screenshot with the choices when user haven't choosen any answer - showing no next button](assets/images/screenshot-no-next-button.png)
+  ![Screenshot with the choices after user selected an answer - showing the next button](assets/images/screenshot-next-button.png)
   
 
 
