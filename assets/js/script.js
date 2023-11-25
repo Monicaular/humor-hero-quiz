@@ -185,16 +185,22 @@ function displayScoreMessage(score) {
     let scoreMessage = "";
 
     if (score === 100) {
-        scoreMessage = `Wow, you nailed it! You are ${score}% Humor Hero!`;
-    } else if (score >= 80) {
-        scoreMessage = `Great job! You are ${score}% Humor Hero!`;
+        scoreMessage = `Wowza! You scored ${score}%. You're a Humor Superhero, soaring above the comedy cosmos with your impeccable wit. Time to update your resume: Chief Executive Jokester!`;
+    } else if (score >= 90) {
+        scoreMessage = `Congratulations! You scored ${score}%. You're officially certified as a Humor Hero. Move over, stand-up comedians – there's a new laughter legend in town!`;
+    } else if (score >= 70) {
+        scoreMessage = `Great job! You've earned the title of Chuckle Champion by scoring ${score}%. Your friends might not roll on the floor, but they'll definitely crack a smile in your comedic presence.`;
+    } else if (score >= 50) {
+        scoreMessage = `You scored ${score}%, not bad! You're a Jest Journeyer. You might not be headlining comedy clubs, but you're definitely on the path to becoming a comedic maestro.`;
     } else {
-        scoreMessage = `Nice try! You are ${score}% Humor Hero`;
+        scoreMessage = `Oops, it seems your funny bone needs a bit of exercise. Fear not! With a little more wit and whimsy, you'll be a Humor Hero in no time. Keep those dad jokes coming!`;
     }
 
     questionText.innerHTML = scoreMessage;
     if (questionCounter >= questions.length) {
         document.getElementById('head-display').style.display = 'none';
+    } else {
+        document.getElementById('head-display').style.display = 'flex';
     }
 }
 
