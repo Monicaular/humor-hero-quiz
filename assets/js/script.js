@@ -107,11 +107,18 @@ let questionCounterDisplay = 0;
 let score = 0;
 
 function beginQuiz() {
-    questionCounter = 0;
+    let = questionCounter = 0;
     score = 0;
     nextButton.innerHTML = 'Next Question';
     displayQuestion();
     updateScoreDisplay();
+
+    if (questionCounter < questions.length) {
+        document.getElementById('head-display').style.display = 'flex';
+    } else {
+        document.getElementById('head-display').style.display = 'none';
+    }
+
 }
 
 // Function for showing the questions
@@ -132,7 +139,7 @@ function displayQuestion() {
         button.innerHTML = answer.text;
         button.classList.add('choices');
         answerChoices.appendChild(button);
-        if(answer.correct) {
+        if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
         button.addEventListener('click', selectChoice); // add click function to the choices
@@ -156,18 +163,18 @@ function resetQuestions() {
 }
 
 // Function for displaying selected choices
-function selectChoice (e) {
+function selectChoice(e) {
     const selectedAnswer = e.target;
     const itsTrue = selectedAnswer.dataset.correct === 'true';
     if (itsTrue) {
         selectedAnswer.classList.add('correct');
         score += 10;
         updateScoreDisplay();
-    }else{
+    } else {
         selectedAnswer.classList.add('incorrect');
     }
     Array.from(answerChoices.children).forEach(button => {
-        if(button.dataset.correct === 'true') {
+        if (button.dataset.correct === 'true') {
             button.classList.add('correct');
         }
         button.disabled = true;
@@ -208,10 +215,11 @@ function displayScoreMessage(score) {
 
 function handleNextQuestion() {
     questionCounter++;
+
     if (questionCounter < questions.length) {
         document.getElementById('head-display').style.display = 'flex';
         displayQuestion();
-    }else{
+    } else {
         document.getElementById('head-display').style.display = 'none';
         displayScore();
     }
@@ -221,7 +229,7 @@ function handleNextQuestion() {
 nextButton.addEventListener('click', () => {
     if (questionCounter < questions.length) {
         handleNextQuestion();
-    }else{
+    } else {
         beginQuiz();
     }
 });
