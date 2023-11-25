@@ -84,6 +84,18 @@ const questions = [
     }
 ];
 
+//Hiding the first page and showing the quiz page
+
+function redirectToQuiz() {
+
+    const quizContainer = document.getElementById('quiz-container');
+    const welcomeBox = document.getElementById('welcome-box');
+
+    welcomeBox.style.display = 'none';
+    quizContainer.style.display = 'block';
+    quizContainer.scrollIntoView({ behavior: 'smooth' });
+}
+
 // Start quiz function
 const questionText = document.getElementById('question');
 const answerChoices = document.getElementById('answer-choices');
