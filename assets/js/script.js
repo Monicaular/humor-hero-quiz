@@ -107,7 +107,7 @@ let questionCounterDisplay = 0;
 let score = 0;
 
 function beginQuiz() {
-    let = questionCounter = 0;
+    questionCounter = 0;
     score = 0;
     nextButton.innerHTML = 'Next Question';
     displayQuestion();
@@ -144,7 +144,7 @@ function displayQuestion() {
         }
         button.addEventListener('click', selectChoice); // add click function to the choices
     });
-};
+}
 
 //Function for displaying the score when questions are over;
 function displayScore() {
