@@ -9,6 +9,60 @@ body {
     background: #385170;
 }
 
+.first-page {
+    background-color: #ff7e67;
+    width: 90%;
+    max-width: 700px;
+    margin: 6rem auto 0;
+    border-radius: 5px;
+    padding: 1rem;
+
+}
+
+.first-page h1 {
+    font-size: 30px;
+    font-weight: 500;
+    padding: 1rem;
+    text-align: center;
+    color: #35495e;
+    border-bottom: 2px solid #347474;
+}
+
+.message-box {
+    padding: 1rem;
+
+}
+
+.how-to {
+    padding: 1rem;
+    border-bottom: 2px solid #347474;
+}
+
+.start-game {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.play-rules {
+    padding: 0.5rem;
+}
+
+.btn {
+    background: #35495e;
+    color: white;
+    text-decoration: none;
+    margin: 1rem 0;
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: white;
+    color: #35495e;
+}
+
 .container {
     background-color: #ff7e67;
     width: 90%;
