@@ -27,7 +27,7 @@ It is incredibly user-friendly. The first page provides a clear description and 
 
 + This quiz is targeting individuals with a good sense of humor and enjoy reading riddles and also to tell others. 
 + They can see the correct answer to the quiz instantaneously when selecting the wrong answer.
-+ User is not able to change their answer once hehas selected one. 
++ User is not able to change their answer once he has selected one. 
 + It is responsive to all kind of devices.
 
 ## Existing Features
@@ -57,7 +57,7 @@ It is incredibly user-friendly. The first page provides a clear description and 
   
 + Score result section
 
-  + A different score mesage is popping up for the user dependin on their score range. 
+  + A different score mesage is popping up for the user depending on their score range. 
   + User can restart the game by pressing on the 'Let's Play Again' button. 
   ![Screenshot with the score message](assets/images/screenshot-score-page.png)
     
@@ -119,8 +119,7 @@ Every page of the project was checked for errors using the W3C Markup Validator,
 ![Screenshot of the style.css validation result](assets/images/screenshot-css-validator.png)</details>
 
 <details><summary>script.js</summary>
-
-![Screenshot of the script.js validation result](assets/images/screenshot-jshint.png)</details>
+No warnings showing up.
 
 ### Manual Testing
 
