@@ -21,6 +21,7 @@
 <title>Humor Hero Quiz</title>
 </head>
 <body>
+    <!--First Page-->
 <div class="first-page" id="welcome-box">
     <h1 class="quiz-title"><i class="fa-solid fa-face-laugh"></i>Humor Hero Quiz</h1>
     <div class="message-box">
@@ -37,6 +38,7 @@
           <button class="btn" id="start-btn" onclick="redirectToQuiz()">Start</button> 
         </div>
     </div>
+    <!--Quiz Area-->
 <div class="container" id="quiz-container">
     <h1 class="quiz-title"> <i class="fa-solid fa-face-laugh"></i> Humor Hero Quiz </h1>
     <div class="quiz">
@@ -50,20 +52,21 @@
                 <h1 class="head-main-text" id="score"> 0 </h1>
             </div>
         </div>
+        <!--Question and choices-->
         <h2 id="question">Please answer to the following question</h2>
         <div id="answer-choices">
             <button class="choices">Choice 1</button>
             <button class="choices">Choice 2</button>
             <button class="choices">Choice 3</button>
         </div>
+        <!--Next Button-->
         <button id="next">Next Question</button>
     </div>
+    <!--Home Button-->
     <div>
-        <button id="home-button">Take me back to home</button>
+        <button id="home-button" onclick="redirectToHome()">Take me back to home</button>
     </div>
 </div>
-
-
     <script src="./assets/js/script.js"></script>
 </body>
 </html>

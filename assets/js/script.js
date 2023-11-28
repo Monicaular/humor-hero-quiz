@@ -84,18 +84,6 @@ const questions = [
     }
 ];
 
-//Hiding the first page and showing the quiz page
-
-function redirectToQuiz() {
-
-    const quizContainer = document.getElementById('quiz-container');
-    const welcomeBox = document.getElementById('welcome-box');
-
-    welcomeBox.style.display = 'none';
-    quizContainer.style.display = 'block';
-    quizContainer.scrollIntoView({ behavior: 'smooth' });
-}
-
 // Start quiz function
 const questionText = document.getElementById('question');
 const answerChoices = document.getElementById('answer-choices');
@@ -117,8 +105,32 @@ function beginQuiz() {
         document.getElementById('head-display').style.display = 'flex';
     } else {
         document.getElementById('head-display').style.display = 'none';
+        displayScore();
     }
+}
 
+//Hiding the first page and showing the quiz page
+
+function redirectToQuiz() {
+
+    const quizContainer = document.getElementById('quiz-container');
+    const welcomeBox = document.getElementById('welcome-box');
+
+    welcomeBox.style.display = 'none';
+    quizContainer.style.display = 'block';
+    quizContainer.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Function to take the user back to the start page
+function redirectToHome() {
+    const welcomeBox = document.getElementById('welcome-box');
+    const quizContainer = document.getElementById('quiz-container');
+
+    // Show the first page and hide the quiz container
+    welcomeBox.style.display = 'block';
+    quizContainer.style.display = 'none';
+
+    window.scrollTo(0, 0);
 }
 
 // Function for showing the questions
@@ -146,19 +158,48 @@ function displayQuestion() {
     });
 }
 
+// Function for hiding the question and choices from html and replacing them 
+
+const homeButton = document.getElementById('home-button');
+
+homeButton.addEventListener('click', () => {
+    redirectToHome();
+});
+
+function resetQuestions() {
+    nextButton.style.display = 'none';
+    homeButton.style.display = 'none'; // Hide the home button when resetting questions
+
+    while (answerChoices.firstChild) {
+        answerChoices.removeChild(answerChoices.firstChild);
+    }
+}
+
 //Function for displaying the score when questions are over;
 function displayScore() {
     resetQuestions();
     displayScoreMessage(score);
     nextButton.innerHTML = "Let's Play Again";
     nextButton.style.display = 'block';
+
+    // Show the home button only when displaying the score message
+    if (questionCounter >= questions.length) {
+        homeButton.style.display = 'block';
+    } else {
+        homeButton.style.display = 'none';
+    }
 }
 
-// Function for hiding the question and choices from html and replacing them 
-function resetQuestions() {
-    nextButton.style.display = 'none';
-    while (answerChoices.firstChild) {
-        answerChoices.removeChild(answerChoices.firstChild);
+// Function for showing the next question after selecting a choice
+function handleNextQuestion() {
+    questionCounter++;
+
+    if (questionCounter < questions.length) {
+        document.getElementById('head-display').style.display = 'flex';
+        displayQuestion();
+    } else {
+        document.getElementById('head-display').style.display = 'none';
+        displayScore();
     }
 }
 
@@ -187,6 +228,7 @@ function updateScoreDisplay() {
     scoreDisplay.innerText = `${score}%`;
 }
 
+
 //Function for displaying score messages 
 function displayScoreMessage(score) {
     let scoreMessage = "";
@@ -204,24 +246,14 @@ function displayScoreMessage(score) {
     }
 
     questionText.innerHTML = scoreMessage;
+
+    // Show the home button only when displaying the score message
+    homeButton.style.display = (questionCounter >= questions.length) ? 'block' : 'none';
+
     if (questionCounter >= questions.length) {
         document.getElementById('head-display').style.display = 'none';
     } else {
         document.getElementById('head-display').style.display = 'flex';
-    }
-}
-
-// Function for showing the next question after selecting a choice
-
-function handleNextQuestion() {
-    questionCounter++;
-
-    if (questionCounter < questions.length) {
-        document.getElementById('head-display').style.display = 'flex';
-        displayQuestion();
-    } else {
-        document.getElementById('head-display').style.display = 'none';
-        displayScore();
     }
 }
 
