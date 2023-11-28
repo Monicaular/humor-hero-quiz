@@ -1,72 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!--CSS-->
-<link rel="stylesheet" href="assets/css/style.css">
-<!--Favicon-->
-<link rel="icon" href="assets/favicon/favicon.ico">
-<!--Google Fonts-->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--CSS-->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!--Favicon-->
+    <link rel="icon" href="assets/favicon/favicon.ico" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
-<!--Fontawesome-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--Fontawesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-<title>Humor Hero Quiz</title>
-</head>
-<body>
+    <title>Humor Hero Quiz</title>
+  </head>
+  <body>
     <!--First Page-->
-<div class="first-page" id="welcome-box">
-    <h1 class="quiz-title"><i class="fa-solid fa-face-laugh"></i>Humor Hero Quiz</h1>
-    <div class="message-box">
-    <p>Welcome to Humor Hero Quiz, where laughter reigns supreme! Unleash your inner comedic genius with our hilarious quiz. Ready to discover your humor superpowers? Let the laughter journey begin!</p>
-    </div>
-    <div class="how-to">
+    <div class="first-page" id="welcome-box">
+      <h1 class="quiz-title">
+        <i class="fa-solid fa-face-laugh"></i>Humor Hero Quiz
+      </h1>
+      <div class="message-box">
+        <p>
+          Welcome to Humor Hero Quiz, where laughter reigns supreme! Unleash
+          your inner comedic genius with our hilarious quiz. Ready to discover
+          your humor superpowers? Let the laughter journey begin!
+        </p>
+      </div>
+      <div class="how-to">
         <h2>How to Play</h2>
-        <p class="play-rules">1. Click "Start" to dive into the world of humor. We'll throw a series of witty questions your way, each designed to tickle your funny bone.</p>
-        <p class="play-rules">2. Select the responses that resonate with your sense of humor. Trust your gut and go with what truly makes you laugh!</p>
-        <p class="play-rules">3. As you answer each question, you'll be racking up points. The more laughs you generate, the higher your Humor Hero score.</p>
-        <p class="play-rules">Ready to play and prove you're the ultimate Humor Hero? Click "Start" now! </p>
-    </div>
-        <div class="start-game" id="start-page">
-          <button class="btn" id="start-btn" onclick="redirectToQuiz()">Start</button> 
-        </div>
+        <p class="play-rules">
+          1. Click "Start" to dive into the world of humor. We'll throw a series
+          of witty questions your way, each designed to tickle your funny bone.
+        </p>
+        <p class="play-rules">
+          2. Select the responses that resonate with your sense of humor. Trust
+          your gut and go with what truly makes you laugh!
+        </p>
+        <p class="play-rules">
+          3. As you answer each question, you'll be racking up points. The more
+          laughs you generate, the higher your Humor Hero score.
+        </p>
+        <p class="play-rules">
+          Ready to play and prove you're the ultimate Humor Hero? Click "Start"
+          now!
+        </p>
+      </div>
+      <div class="start-game" id="start-page">
+        <button class="btn" id="start-btn" onclick="redirectToQuiz()">
+          Start
+        </button>
+      </div>
     </div>
     <!--Quiz Area-->
-<div class="container" id="quiz-container">
-    <h1 class="quiz-title"> <i class="fa-solid fa-face-laugh"></i> Humor Hero Quiz </h1>
-    <div class="quiz">
+    <div class="container" id="quiz-container">
+      <h1 class="quiz-title">
+        <i class="fa-solid fa-face-laugh"></i> Humor Hero Quiz
+      </h1>
+      <div class="quiz">
         <div id="head-display">
-            <div class="head-item">
-                <p class="head-prefix"> Question</p>
-                <h1 class="head-main-text" id="question-number">1/3</h1>
-            </div>
-            <div class="head-item">
-                <p class="head-prefix"> Score </p>
-                <h1 class="head-main-text" id="score"> 0 </h1>
-            </div>
+          <div class="head-item">
+            <p class="head-prefix">Question</p>
+            <h1 class="head-main-text" id="question-number">1/3</h1>
+          </div>
+          <div class="head-item">
+            <p class="head-prefix">Score</p>
+            <h1 class="head-main-text" id="score">0</h1>
+          </div>
         </div>
         <!--Question and choices-->
         <h2 id="question">Please answer to the following question</h2>
         <div id="answer-choices">
-            <button class="choices">Choice 1</button>
-            <button class="choices">Choice 2</button>
-            <button class="choices">Choice 3</button>
+          <button class="choices">Choice 1</button>
+          <button class="choices">Choice 2</button>
+          <button class="choices">Choice 3</button>
         </div>
         <!--Next Button-->
         <button id="next">Next Question</button>
+      </div>
+      <!--Home Button-->
+      <div>
+        <button id="home-button">Take me back to home</button>
+      </div>
     </div>
-    <!--Home Button-->
-    <div>
-        <button id="home-button" onclick="redirectToHome()">Take me back to home</button>
-    </div>
-</div>
     <script src="./assets/js/script.js"></script>
-</body>
+  </body>
 </html>

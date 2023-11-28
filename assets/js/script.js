@@ -95,6 +95,7 @@ let questionCounterDisplay = 0;
 let score = 0;
 
 function beginQuiz() {
+    console.log("start quiz");
     questionCounter = 0;
     score = 0;
     nextButton.innerHTML = 'Next Question';
@@ -112,6 +113,8 @@ function beginQuiz() {
 //Hiding the first page and showing the quiz page
 
 function redirectToQuiz() {
+    console.log("redirect func");
+    beginQuiz();
 
     const quizContainer = document.getElementById('quiz-container');
     const welcomeBox = document.getElementById('welcome-box');
@@ -123,14 +126,12 @@ function redirectToQuiz() {
 
 // Function to take the user back to the start page
 function redirectToHome() {
-    const welcomeBox = document.getElementById('welcome-box');
+    console.log("redirect home func");
     const quizContainer = document.getElementById('quiz-container');
-
-    // Show the first page and hide the quiz container
-    welcomeBox.style.display = 'block';
+    const welcomeBox = document.getElementById('welcome-box');
     quizContainer.style.display = 'none';
-
-    window.scrollTo(0, 0);
+    welcomeBox.style.display = 'block';
+    wi    window.scrollTo(0, 0);
 }
 
 // Function for showing the questions
@@ -227,7 +228,6 @@ function selectChoice(e) {
 function updateScoreDisplay() {
     scoreDisplay.innerText = `${score}%`;
 }
-
 
 //Function for displaying score messages 
 function displayScoreMessage(score) {
