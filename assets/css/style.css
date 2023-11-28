@@ -151,6 +151,8 @@ body {
     color: #35495e;
 }
 
+
+
 /* Styles for correct and incorrect choices created din JS */
 .correct {
     background: rgb(182, 244, 146);
