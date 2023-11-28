@@ -150,7 +150,16 @@ body {
     background: white;
     color: #35495e;
 }
-
+#home-button {
+    background: #35495e;
+    color: white;
+    width: 130px;
+    padding: 1rem;
+    margin: 1rem auto 0;
+    border-radius: 3px;
+    cursor: pointer;
+    display: none;
+}
 
 
 /* Styles for correct and incorrect choices created din JS */
