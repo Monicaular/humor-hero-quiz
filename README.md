@@ -114,15 +114,15 @@ Every page of the project was checked for errors using the W3C Markup Validator,
 ![Screenshot of the validating result for index.html](assets/images/screen-shot-html-validator.png)
 </details>
 
-<details><summary>style.css</summary>
+ <details><summary>style.css</summary>
 
-![Screenshot of the style.css validation result](assets/images/screenshot-css-validator.png)</details>
-
-<details><summary>script.js</summary>
+ ![Screenshot of the style.css validation result](assets/images/screenshot-css-validator.png)</details>
+ <details><summary>script.js</summary>
 No warnings showing up.
-
-### Manual Testing
-
+</details>
+ 
+ ### Manual Testing
+ 
 + The website was tested on Google Chrome, Microsoft Edge, and Firefox browsers.
 + The website was viewed on a desktop computer, laptop, and an iPhone 13 mobile phone.
 + A large amount of testing was done to ensure links between pages are working correctly on all pages.
@@ -188,8 +188,6 @@ By forking the repository, we make a copy of the original repository on our GitH
 ### Code
 
 + Code on how to check the correct answers and the format of the questions was based on [Great Stack on Youtube](https://www.youtube.com/watch?v=PBcqGxrr9g8.)
-+ Code on how to disable the click was based on [Great Stack on Youtube](https://www.youtube.com/watch?v=PBcqGxrr9g8.)
-+ Code on how to show a head display with the question number and the score was based on [James Q Quick Youtube Tutorial](https://www.youtube.com/watch?v=rFWbAj40JrQ&t=8s)
 + Understanting the concept of functions and methods [Shaun Pelling](https://www.youtube.com/watch?v=xUI5Tsl2JpY)
 + The ReadMe template was provided by [Code Institute](https://github.com/Code-Institute-Solutions/readme-template)
 
