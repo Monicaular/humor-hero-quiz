@@ -9,6 +9,7 @@ body {
     background: #385170;
 }
 
+/* Styling the Home Page */
 .first-page {
     background-color: #ff7e67;
     width: 90%;
@@ -38,15 +39,17 @@ body {
     border-bottom: 2px solid #347474;
 }
 
+.play-rules {
+    padding: 0.5rem;
+}
+
+/* Styling the start Button */
+
 .start-game {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-}
-
-.play-rules {
-    padding: 0.5rem;
 }
 
 .btn {
@@ -63,23 +66,7 @@ body {
     color: #35495e;
 }
 
-.container {
-    background-color: #ff7e67;
-    width: 90%;
-    max-width: 700px;
-    margin: 3rem auto 0;
-    border-radius: 5px;
-    display: none;
-}
-
-.container h1 {
-    font-size: 30px;
-    font-weight: 500;
-    border-bottom: 2px solid #347474;
-    padding: 1rem;
-    text-align: center;
-    color: #35495e;
-}
+/*Styling the Head Display with the questions and the score*/
 
 #head-display {
     display: flex;
@@ -97,6 +84,26 @@ body {
 .head-main-text {
     background-color: rgb(182, 244, 146);
     border-radius: 50%;
+}
+
+/*Styling the quiz area*/
+
+.container {
+    background-color: #ff7e67;
+    width: 90%;
+    max-width: 700px;
+    margin: 3rem auto 0;
+    border-radius: 5px;
+    display: none;
+}
+
+.container h1 {
+    font-size: 30px;
+    font-weight: 500;
+    border-bottom: 2px solid #347474;
+    padding: 1rem;
+    text-align: center;
+    color: #35495e;
 }
 
 .quiz {
@@ -135,6 +142,8 @@ body {
     cursor: no-drop;
 }
 
+/* Styling the next button*/
+
 #next {
     background: #35495e;
     color: white;
@@ -150,6 +159,8 @@ body {
     background: white;
     color: #35495e;
 }
+
+/*Styling the home button*/
 #home-button {
     background: #35495e;
     color: white;
@@ -160,7 +171,6 @@ body {
     cursor: pointer;
     display: none;
 }
-
 
 /* Styles for correct and incorrect choices created din JS */
 .correct {
