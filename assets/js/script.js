@@ -113,7 +113,6 @@ function beginQuiz() {
 //Hiding the first page and showing the quiz page
 
 function redirectToQuiz() {
-    console.log("redirect func");
     beginQuiz();
 
     const quizContainer = document.getElementById('quiz-container');
@@ -126,12 +125,11 @@ function redirectToQuiz() {
 
 // Function to take the user back to the start page
 function redirectToHome() {
-    console.log("redirect home func");
     const quizContainer = document.getElementById('quiz-container');
     const welcomeBox = document.getElementById('welcome-box');
     quizContainer.style.display = 'none';
     welcomeBox.style.display = 'block';
-window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
 }
 
 // Function for showing the questions
