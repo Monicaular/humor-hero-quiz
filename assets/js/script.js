@@ -131,7 +131,7 @@ function redirectToHome() {
     const welcomeBox = document.getElementById('welcome-box');
     quizContainer.style.display = 'none';
     welcomeBox.style.display = 'block';
-    wi    window.scrollTo(0, 0);
+window.scrollTo(0, 0);
 }
 
 // Function for showing the questions

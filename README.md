@@ -60,6 +60,8 @@ It is incredibly user-friendly. The first page provides a clear description and 
   + A different score mesage is popping up for the user depending on their score range. 
   + User can restart the game by pressing on the 'Let's Play Again' button. 
   ![Screenshot with the score message](assets/images/screenshot-score-page.png)
+  + User can also choose to go back to the home page if they wanted.
+  ![Screenhot with the play again and take me home button](assets/images/screenshot-score-page-buttons.png)
     
 ## Features to be implemented
 
